@@ -1,0 +1,39 @@
+.main-container{
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+   justify-content: center; 
+  align-items: center;
+}
+.navbar{
+  width: 100vw;
+  height: 10vh;
+  background-color: black;
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  font-size: 1.5em;
+  font-weight: 600;
+}
+.components{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.component-container{
+  width: 30%;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.component-img{
+  width: 100%;
+  height: auto;
+  border-radius: 120px;
+}

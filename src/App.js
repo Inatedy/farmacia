@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Home from './components/Home';
 import Products from './components/Products';
 import Info from './components/Info';
+import Patients from './components/Patients';
+import { Switch, Route, NavLink } from 'react-router-dom'
 
 class App extends Component {
   render() {
@@ -11,24 +12,33 @@ class App extends Component {
       <div className="main-container">
         
         <ul className="navbar">
-          <li>
+          <NavLink to="/" style={{color:"#fff", textDecoration: "none"}}>
+            <li className="linksito">
               Home
-          </li>
-          <li>
+            </li>
+          </NavLink>
+          <NavLink to="/products" style={{color:"#fff", textDecoration: "none"}}>
+            <li className="linksito">
               Products
-          </li>
-          <li>
+            </li>
+          </NavLink>
+          <NavLink to="/info" style={{color:"#fff", textDecoration: "none"}}>
+            <li className="linksito">
               Info
-          </li>
+            </li>
+          </NavLink>
+          <NavLink to="/patients" style={{color:"#fff", textDecoration: "none"}}>
+            <li className="linksito">
+              Patients
+            </li>
+          </NavLink>
         </ul>
-        <div className="components">
-          <h1></h1>
-          <Home/>
-          <h1></h1>
-          <Products></Products>
-          <h1></h1>
-          <Info/>
-          </div>
+        <switch>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/products" component={Products} />
+          <Route exact path="/info" component={Info} />
+          <Route exact path="/patients" component={Patients} />
+        </switch>
       </div>
       
     );
